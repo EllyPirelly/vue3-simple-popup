@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>{{ title }}</h1>
+    <p>Click "About" in Navigation to get to the Modal</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
+  name: 'Home',
+
+  data() {
+    return {
+      title: 'Just another Vue app',
+    }
   },
-};
+}
 </script>
+
+<style lang="scss">
+//
+</style>

@@ -1,24 +1,22 @@
-# vue3-simple-popup
+# Vue 3 CLI set-up with Vue Router a modal
 
-## Project setup
-```
-npm install
-```
+## What is this about?
+- a very simple Vue 3 CLI set-up with a very simple navigation (router-link)
+- a very simple modal on the "about" page
+- this project is only for set-up practicing purposes and only has the bare minimum regarding styling
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Tech Stack
+- Vue 3
+- HTML, SCSS, JavaScript
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+## How to run this?
+- clone the repo
+- cd into project
+- `npm install` to prepare the project setup
+- `npm run serve` to compile and hot-reaload for development, this will generally fire up the server at http://localhost:8080/ (or the next availble number)
+- `npm run build` to compile and minify for production
+- `npm run lint` to lint and fix files
+- `control c` to properly stop the server
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
