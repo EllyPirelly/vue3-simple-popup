@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ title }}</h1>
-    <p>Click "About" in Navigation to get to the Modal</p>
+    <p>Click "About" in Navigation to get to the Modals</p>
   </div>
 </template>
 

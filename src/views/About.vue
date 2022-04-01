@@ -1,20 +1,38 @@
 <template>
   <h1>{{ title }}</h1>
+  <p>{{ context }}</p>
 
+  <!-- modal one -->
   <div v-if="showModal">
     <!-- slot default - content passed down to modal -->
     <Modal theme="attention" @closeevent="toggleModal">
+      <h1>Modal One Headline</h1>
+      <p>Modal One p tag</p>
+
       <!-- slot named - content passed down to modal -->
       <template v-slot:links>
-        <a href="#">sign up now (slot)</a>
-        <a href="#">more info (slot)</a>
+        <a href="#">sign up now</a>
+        <a href="#">more info</a>
       </template>
-      <h1>Modal Headline coming in via slot</h1>
-      <p>Modal p tag coming in via slot</p>
     </Modal>
   </div>
 
-  <button class="btn-primary" @click="toggleModal">Open Me</button>
+  <!-- modal two -->
+  <div v-if="showModalTwo">
+    <Modal theme="attention" @closeevent="toggleModalTwo">
+      <h1>Modal Two Headline</h1>
+      <p>Modal Two p tag</p>
+
+      <template v-slot:links>
+        <a href="#">click for fun</a>
+      </template>
+    </Modal>
+  </div>
+
+  <div class="btn-primary-wrapper">
+    <button class="btn-primary" @click="toggleModal">Open Modal One</button>
+    <button class="btn-primary" @click="toggleModalTwo">Open Modal Two</button>
+  </div>
 </template>
 
 <script>
@@ -30,15 +48,19 @@ export default {
   data() {
     return {
       title: 'This is an about page with a modal',
-      header: "I'm a modal you know what I mean",
-      promo: 'and I do my little turn on the Vue walk',
+      context: 'Content in Modals in coming in via Vue slots',
       showModal: false,
+      showModalTwo: false,
     }
   },
 
   methods: {
     toggleModal() {
       this.showModal = !this.showModal
+    },
+
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo
     },
   },
 }
@@ -49,8 +71,17 @@ export default {
   margin-top: 20px;
   padding: 10px;
 
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
   &:hover {
     border: 2px solid #dda0dd;
   }
+}
+
+.btn-primary-wrapper {
+  display: flex;
+  justify-content: center;
 }
 </style>
