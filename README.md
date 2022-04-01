@@ -5,6 +5,10 @@
 - a very simple modal on the "about" page
 - this project is only for set-up practicing purposes and only has the bare minimum regarding styling
 
+## Branches
+- please see `main` for the very simple modal
+- please see `slots` for two modals coming in via slots
+
 ## Tech Stack
 - Vue 3
 - HTML, SCSS, JavaScript

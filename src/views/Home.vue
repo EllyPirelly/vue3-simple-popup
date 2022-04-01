@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ title }}</h1>
-    <p>Click "About" in Navigation to get to the Modals</p>
+    <p>Click "About" in navigation to get to the modals</p>
   </div>
 </template>
 
@@ -18,5 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-//
+.home {
+  margin-top: 30px;
+}
 </style>

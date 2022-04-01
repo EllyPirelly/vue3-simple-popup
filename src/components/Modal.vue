@@ -1,6 +1,9 @@
 <template>
   <div class="modal-container" @click.self="closeModal">
-    <div class="modal" :class="{ attention: theme === 'attention' }">
+    <div
+      class="modal"
+      :class="{ attention: theme === 'attention', promo: theme === 'promo' }"
+    >
       <!-- default slot -->
       <slot></slot>
       <div class="link-container">
@@ -39,40 +42,71 @@ export default {
     width: 400px;
   }
 
-  h1 {
-    color: #808080;
-    border: none;
-    padding: 0;
-  }
-
   p {
     font-style: normal;
   }
 
   .link-container {
-    text-align: center;
     margin: 30px 0 10px 0;
+    text-align: center;
 
     a {
       color: #333;
-      padding: 8px;
       border: 2px solid #333;
       border-radius: 4px;
-      text-decoration: none;
       margin: 10px;
+      padding: 8px;
+      text-decoration: none;
     }
   }
 
   .attention {
     background-color: #dda0dd;
 
-    h1 {
-      color: #fff;
+    h1,
+    p,
+    a {
+      color: #800080;
+    }
+
+    p {
+      font-weight: bold;
+      margin-top: 10px;
     }
 
     .link-container a {
-      color: #800080;
       border: 1px solid #800080;
+      color: #fff;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #800080;
+      }
+    }
+  }
+
+  .promo {
+    background-color: #6c6cdc;
+
+    h1,
+    p,
+    a {
+      color: #fff;
+    }
+
+    p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .link-container a {
+      border: 1px solid #fff;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #fff;
+        color: #6c6cdc;
+      }
     }
   }
 }

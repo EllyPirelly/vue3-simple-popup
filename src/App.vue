@@ -14,21 +14,24 @@
 <style lang="scss">
 #app {
   font-family: 'Bitter', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 #nav {
-  padding: 30px;
+  padding-top: 30px;
 
   a {
-    font-weight: bold;
     color: #2c3e50;
+    font-weight: bold;
 
     &.router-link-exact-active {
-      color: #dda0dd;
+      color: #d2691e;
+    }
+
+    &:hover {
+      color: #efb082;
     }
   }
 }
