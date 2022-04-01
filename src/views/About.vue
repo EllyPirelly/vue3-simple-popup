@@ -2,12 +2,16 @@
   <h1>{{ title }}</h1>
 
   <div v-if="showModal">
-    <Modal
-      :header="header"
-      :promo="promo"
-      theme="attention"
-      @closeevent="toggleModal"
-    />
+    <!-- slot default - content passed down to modal -->
+    <Modal theme="attention" @closeevent="toggleModal">
+      <!-- slot named - content passed down to modal -->
+      <template v-slot:links>
+        <a href="#">sign up now (slot)</a>
+        <a href="#">more info (slot)</a>
+      </template>
+      <h1>Modal Headline coming in via slot</h1>
+      <p>Modal p tag coming in via slot</p>
+    </Modal>
   </div>
 
   <button class="btn-primary" @click="toggleModal">Open Me</button>

@@ -1,15 +1,19 @@
 <template>
-  <div class="modal" @click.self="closeModal">
-    <div class="backdrop" :class="{ attention: theme === 'attention' }">
-      <h1>{{ header }}</h1>
-      <p>{{ promo }}</p>
+  <div class="modal-container" @click.self="closeModal">
+    <div class="modal" :class="{ attention: theme === 'attention' }">
+      <!-- default slot -->
+      <slot></slot>
+      <div class="link-container">
+        <!-- named slot -->
+        <slot name="links"></slot>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['header', 'promo', 'theme'],
+  props: ['theme'],
 
   methods: {
     closeModal() {
@@ -20,37 +24,56 @@ export default {
 </script>
 
 <style lang="scss">
-.modal {
+.modal-container {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   position: fixed;
   top: 0;
   width: 100%;
-}
 
-.modal .backdrop {
-  background-color: #fff;
-  border-radius: 10px;
-  margin: 100px auto;
-  padding: 20px;
-  width: 400px;
-}
+  .modal {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 100px auto;
+    padding: 20px;
+    width: 400px;
+  }
 
-.modal h1 {
-  color: #808080;
-  border: none;
-  padding: 0;
-}
+  h1 {
+    color: #808080;
+    border: none;
+    padding: 0;
+  }
 
-.modal p {
-  font-style: normal;
-}
+  p {
+    font-style: normal;
+  }
 
-.modal .attention {
-  background-color: #dda0dd;
-}
+  .link-container {
+    text-align: center;
+    margin: 30px 0 10px 0;
 
-.modal .attention h1 {
-  color: #fff;
+    a {
+      color: #333;
+      padding: 8px;
+      border: 2px solid #333;
+      border-radius: 4px;
+      text-decoration: none;
+      margin: 10px;
+    }
+  }
+
+  .attention {
+    background-color: #dda0dd;
+
+    h1 {
+      color: #fff;
+    }
+
+    .link-container a {
+      color: #800080;
+      border: 1px solid #800080;
+    }
+  }
 }
 </style>
