@@ -1,4 +1,4 @@
-# Vue 3 CLI project with one / two modals
+# Vue 3 CLI - One / Two Modals
 
 ## What is this about?
 - a very simple Vue 3 CLI set-up with a very simple navigation (router-link)
