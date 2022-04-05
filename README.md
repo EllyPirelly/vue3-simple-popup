@@ -7,7 +7,15 @@
 
 ## Branches
 - please see `main` for the very simple modal
+![one-1](./src/assets/screenshots/vue3-modal-one-1.png)
+![one-2](./src/assets/screenshots/vue3-modal-one-2.png)
+![one-3](./src/assets/screenshots/vue3-modal-one-3.png)
+
 - please see `slots` for two modals coming in via slots
+![two-1](./src/assets/screenshots/vue3-modal-two-1.png)
+![two-2](./src/assets/screenshots/vue3-modal-two-2.png)
+![two-3](./src/assets/screenshots/vue3-modal-two-3.png)
+![two-4](./src/assets/screenshots/vue3-modal-two-4.png)
 
 ## Tech Stack
 - Vue 3
